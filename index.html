@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulación de Entrevista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Aquí agregamos el logo -->
+    <header class="logo-container">
+      <img src="https://e7.pngegg.com/pngimages/867/474/png-clipart-application-for-employment-labor-education-aefmup-interview-process-steps-logo-employment.png" alt="Logo de la Página" class="logo">
+    </header>
+
+    <!-- Sección del formulario de datos del estudiante -->
+    <div id="student-info">
+      <h1>Preparación para Entrevistas</h1>
+      <form id="studentForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" required>
+        
+        <label for="age">Edad:</label>
+        <input type="number" id="age" required>
+        
+        <label for="career">Carrera:</label>
+        <input type="text" id="career" required>
+        
+        <label for="job">Puesto al que postulas:</label>
+        <input type="text" id="job" required>
+        
+        <button type="submit">Iniciar Simulación</button>
+      </form>
+    </div>
+
+    <!-- Sección de preguntas -->
+    <div id="interview-questions" style="display: none;">
+      <h2>Responde las siguientes preguntas:</h2>
+      <form id="questionsForm">
+        <div class="question">
+          <p>1. ¿Por qué quieres este trabajo?</p>
+          <label><input type="radio" name="q1" value="correcta"> Porque me apasiona la industria</label><br>
+          <label><input type="radio" name="q1" value="incorrecta"> Porque necesito el dinero</label><br>
+          <label><input type="radio" name="q1" value="incorrecta"> Porque no encontré otra opción</label>
+        </div>
+
+        <div class="question">
+          <p>2. ¿Dónde te ves en 5 años?</p>
+          <label><input type="radio" name="q2" value="correcta"> Liderando proyectos en este campo</label><br>
+          <label><input type="radio" name="q2" value="incorrecta"> En otro trabajo, quizá diferente</label><br>
+          <label><input type="radio" name="q2" value="incorrecta"> No tengo idea aún</label>
+        </div>
+
+        <div class="question">
+          <p>3. ¿Cómo manejas el trabajo bajo presión?</p>
+          <label><input type="radio" name="q3" value="correcta"> Organizando y priorizando tareas</label><br>
+          <label><input type="radio" name="q3" value="incorrecta"> Me estreso fácilmente</label><br>
+          <label><input type="radio" name="q3" value="incorrecta"> Pido ayuda inmediata</label>
+        </div>
+
+        <div class="question">
+          <p>4. ¿Cuál es tu mayor fortaleza?</p>
+          <label><input type="radio" name="q4" value="correcta"> Mi capacidad para resolver problemas</label><br>
+          <label><input type="radio" name="q4" value="incorrecta"> Mi puntualidad</label><br>
+          <label><input type="radio" name="q4" value="incorrecta"> Mi gusto por las reuniones sociales</label>
+        </div>
+
+        <div class="question">
+          <p>5. ¿Qué sabes de nuestra empresa?</p>
+          <label><input type="radio" name="q5" value="correcta"> Conozco su misión y los proyectos en curso</label><br>
+          <label><input type="radio" name="q5" value="incorrecta"> Muy poco, solo que es grande</label><br>
+          <label><input type="radio" name="q5" value="incorrecta"> No sé mucho, pero me encantaría aprender</label>
+        </div>
+
+        <button type="submit">Enviar Respuestas</button>
+      </form>
+    </div>
+
+    <!-- Sección de resultados -->
+    <div id="results" style="display: none;">
+      <h2>Resultados de la Simulación</h2>
+      <p id="studentName"></p>
+      <p id="score"></p>
+      <h3>Sugerencias para Mejorar:</h3>
+      <ul id="suggestions"></ul>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
